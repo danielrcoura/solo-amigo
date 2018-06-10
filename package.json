@@ -1,0 +1,29 @@
+{
+  "name": "mean-auth",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "@google/maps": "^0.4.6",
+    "aws-sdk": "^2.1.6",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "cors": "^2.8.4",
+    "debug": "^2.2.0",
+    "ejs": "2.x",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "moment": "^2.22.0",
+    "mongoose": "^4.4.5",
+    "mongoose-sequence": "^4.0.0",
+    "morgan": "^1.7.0",
+    "nodemailer": "^4.4.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0",
+    "pdfmake": "^0.1.36",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
