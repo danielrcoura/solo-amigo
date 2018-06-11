@@ -17,7 +17,7 @@ class Mailer {
         });
 
         var mailOptions = {
-            from: "Equipe Minha Arvore <ufcgcompcult@gmail.com>", // sender address
+            from: "Equipe Solo Amigo <ufcgcompcult@gmail.com>", // sender address
             to: email, // list of receivers
             subject: subject, // Subject line
             text: message, // plaintext body
