@@ -10,6 +10,7 @@ var Mission = new Schema({
     ref: './user.js' 
   },
   description: String,
+  character: String,
   points: Number,
   secret_code: String,
   is_public: Boolean,
