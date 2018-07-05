@@ -101,6 +101,7 @@ router.post('/', function(req, res) {
   quiz.title           = req.body.title;
   quiz._user           = req.body._user;
   quiz.description     = req.body.description;
+  quiz.character       = req.body.character;
   quiz.points          = req.body.points;
   quiz.secret_code     = generateSecretCode();
   quiz.is_public       = req.body.is_public;
@@ -134,6 +135,7 @@ router.put('/:quiz_id', function(req, res) {
   Quiz.findById(req.params.quiz_id, function(err, quiz) {
     if(req.body.title) quiz.title                   = req.body.title;
     if(req.body.description) quiz.description       = req.body.description;
+    if(req.body.character) quiz.character           = req.body.character;
     if(req.body.points) quiz.points                 = req.body.points;
     if(req.body.is_public !== undefined) quiz.is_public           = req.body.is_public;
     if(req.body.single_answer !== undefined) quiz.single_answer   = req.body.single_answer;
