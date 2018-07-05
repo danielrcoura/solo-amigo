@@ -106,6 +106,7 @@ router.post('/', function(req, res) {
   mission.name             = req.body.name;
   mission._user            = req.body._user;
   mission.description      = req.body.description;
+  mission.character        = req.body.character;
   mission.points           = req.body.points;
   mission.secret_code      = generateSecretCode();
   mission.is_public        = req.body.is_public;
@@ -139,6 +140,7 @@ router.put('/:mission_id', function(req, res) {
   Mission.findById(req.params.mission_id, function(err, mission) {
     if (req.body.name) mission.name                       = req.body.name;
     if (req.body.description) mission.description         = req.body.description;
+    if (req.body.character) mission.character             = req.body.character;
     if (req.body.points) mission.points                   = req.body.points;
     if (req.body.is_public !== undefined) mission.is_public             = req.body.is_public;
     if (req.body.is_grupal !== undefined) mission.is_grupal             = req.body.is_grupal;
