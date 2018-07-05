@@ -10,6 +10,7 @@ var Quiz = new Schema({
   },
   title: String,
   description: String,
+  character: String,
   points: Number,
   secret_code: String,
   is_public: Boolean,
