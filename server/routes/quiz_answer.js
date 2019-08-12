@@ -103,6 +103,7 @@ var verifyAnswer = async function(quiz_id, answer) {
   let quiz = await Quiz.findById(quiz_id).exec();
   
   if(quiz.correct_answer && quiz.correct_answer == answer) {
+    console.log('verify', answer._user, quiz.points);
     recompenseUser(answer._user, quiz.points);
     return true;
   } else if (quiz.correct_answer && quiz.correct_answer != answer.answer) {
@@ -111,6 +112,7 @@ var verifyAnswer = async function(quiz_id, answer) {
 }
 
 var recompenseUser = function(user_id, points) {
+  console.log('user id:', user_id);
   User.findById(user_id, function(err, user) {
       if (user) {
         user.points += points;
